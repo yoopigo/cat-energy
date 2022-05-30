@@ -1,0 +1,54 @@
+.data-onwer {
+  border: 0;
+  padding: 0;
+}
+
+.data-onwer__br {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.data-onwer__title {
+  text-transform: none;
+}
+
+.data-onwer__list {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-row: 1fr 1fr;
+    gap: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
+.data-onwer__item {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    right: 15px;
+    top: 16px;
+  }
+}
+
+.data-onwer__item--email {
+  &::before {
+    background-image: url("../../../img/data-owner/icon-email.svg");
+  }
+}
+
+.data-onwer__item--phone {
+  &::before {
+    background-image: url("../../../img/data-owner/icon-phonel.svg");
+    top: 13px;
+  }
+}

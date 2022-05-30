@@ -1,0 +1,107 @@
+.advantages__wrapper {
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+
+    @media (min-width: @desktop-width) {
+      width: 1440px;
+      margin: 0 auto;
+      padding: 0 110px;
+    }
+  }
+}
+
+.advantages__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 50px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 70px;
+  }
+}
+
+.advantages__item {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+    align-items: start;
+    max-width: 250px;
+    height: 280px;
+    flex: auto;
+    justify-content: space-around;
+    margin: 0;
+    padding: 10px 0 60px 0;
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+}
+
+.advantages__item-one {
+  @media (min-width: @tablet-width) {
+    background-image: url("../../../img/advantages/one.png");
+    background-position-x: 135px;
+  }
+}
+
+.advantages__item-two {
+  @media (min-width: @tablet-width) {
+    background-image: url("../../../img/advantages/two.png");
+  }
+}
+
+.advantages__item-three {
+  @media (min-width: @tablet-width) {
+    background-image: url("../../../img/advantages/three.png");
+  }
+}
+
+.advantages__item-four {
+  @media (min-width: @tablet-width) {
+    background-image: url("../../../img/advantages/four.png");
+  }
+}
+
+.advantages__item-icon-container {
+  background-color: @basic-green;
+  min-width: 60px;
+  height: 60px;
+  .center-flex;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.advantages__title {
+  .title;
+  line-height: 40px;
+}
+
+.advantages-item__descreption {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Arial", sans-serif;
+  .center-flex;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.advantages__item-img {
+  max-width: 40px;
+  max-height: 40px;
+}

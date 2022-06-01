@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="img/icon/32.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="img/icon/180x180.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
     <title>Здоровое питание для котов Cat Energy</title>
   </head>
 
@@ -13,21 +17,20 @@
       <header class="page-header">
         <div class="page-header__wrapper">
           <div class="page-header__logo">
-            <a class="page-header__logo-text--desc">
-              <img
-                src="img/logo/logo-full.svg"
-                width="202"
-                height="59"
-                alt="Логотип Cat Energy"
-              />
-            </a>
-            <a class="page-header__logo-icon--mobile">
-              <img
-                src="img/logo/logo-mobile.svg"
-                width="34"
-                height="58"
-                alt="Логотип Cat Energy"
-              />
+            <a class="page-header__logo-icon" href="Index.html">
+              <picture>
+                <source
+                  media="(min-width: 768px)"
+                  srcset="img/logo/logo-full.svg"
+                />
+                <img
+                  class="page-header__logo-img"
+                  src="img/logo/logo-mini.svg"
+                  width="33"
+                  height="38"
+                  alt="Логотип Cat Energy"
+                />
+              </picture>
             </a>
             <a class="page-header__logo-text--mobile">
               <img
@@ -84,6 +87,23 @@
               </div>
             </div>
             <div class="promo__program">
+              <div class="promo__product">
+                <picture class="promo__product-picture">
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      img/promo/product-tablet.png    1x,
+                      img/promo/product-tablet@2x.png 2x
+                    "
+                  />
+                  <img
+                    class="promo__product-img"
+                    src="img/promo/product.png 1x"
+                    srcset="img/promo/product@2x.png 2x"
+                    alt=""
+                  />
+                </picture>
+              </div>
               <a class="promo__button button" href="program.html"
                 >Подобрать программу</a
               >

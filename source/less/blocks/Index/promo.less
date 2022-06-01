@@ -24,16 +24,6 @@
   }
 }
 
-.promo__title {
-  .title;
-  color: @basic-white;
-
-  @media (min-width: @tablet-width) {
-    color: @basic-black;
-    margin-bottom: 40px;
-  }
-}
-
 .promo__text {
   font-size: 14px;
   width: 100%;
@@ -57,10 +47,14 @@
   }
 }
 
-.promo__button,
-.promo__program {
-  width: 100%;
-  height: 55px;
+.promo__title {
+  .title;
+  color: @basic-white;
+
+  @media (min-width: @tablet-width) {
+    color: @basic-black;
+    margin-bottom: 40px;
+  }
 }
 
 .promo__description {
@@ -81,5 +75,42 @@
   @media (min-width: @tablet-width) {
     justify-content: flex-start;
     width: 245px;
+  }
+}
+
+.promo__product {
+  height: 180px;
+  position: relative;
+  .center-flex;
+
+  @media (min-width: @tablet-width) {
+    top: 400px;
+  }
+}
+
+.promo__product-picture {
+  position: absolute;
+  bottom: -10px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+}
+
+.promo__button,
+.promo__program {
+  width: 100%;
+}
+
+.promo__button {
+  font-size: 14px;
+  line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    width: 245px;
+    height: 55px;
+    position: absolute;
   }
 }

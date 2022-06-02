@@ -1,3 +1,26 @@
+.page-header {
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
+}
+
+.page-header__background {
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    width: 50%;
+    height: 695px;
+    right: 0px;
+    background-size: 100%;
+    background-color: @special-green-two;
+    background-repeat: no-repeat;
+    background-image: url("../../../img/header/background-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../../img/header/background-desktop@2x.jpg");
+    }
+  }
+}
+
 .page-header__wrapper {
   padding: 0 20px;
 

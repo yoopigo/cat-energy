@@ -41,6 +41,8 @@
     gap: 15px;
     align-content: center;
     margin: 0;
+    width: 485px;
+    margin-left: auto;
   }
 }
 
@@ -48,6 +50,7 @@
   padding-bottom: 20px;
   padding-top: 20px;
   border-bottom: 1px solid @special-white;
+  z-index: 2;
 
   &:first-child {
     padding-top: 20px;
@@ -80,6 +83,17 @@
 
   &:active {
     color: @opacity-grey-two;
+  }
+  @media (min-width: @desktop-width) {
+    color: @basic-white;
+
+    &:hover {
+      color: @opacity-white-two;
+    }
+
+    &:active {
+      color: @opacity-white;
+    }
   }
 }
 

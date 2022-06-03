@@ -1,5 +1,5 @@
 .nutrition-program {
-  min-height: 365px;
+  min-height: 265px;
   background-color: @basic-grey;
   display: flex;
   flex-direction: column;
@@ -8,9 +8,12 @@
   margin-top: 20px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 40px;
+    margin-top: 60px;
     min-height: 372px;
     padding: 0 50px;
+    padding-left: 34px;
+    justify-content: center;
+    padding-left: 50px;
 
     @media (min-width: @desktop-width) {
       width: 570px;
@@ -24,16 +27,19 @@
   text-transform: uppercase;
   text-align: center;
   position: relative;
-  padding-left: 40px;
+  padding-left: 12px;
+  padding-top: 15px;
   font-weight: 400;
+  margin: 0;
 
   &::before {
     content: "";
     width: 50px;
     height: 53px;
     position: absolute;
-    left: 1px;
-    top: -5px;
+    left: 395px;
+    top: 20px;
+    background-repeat: no-repeat;
   }
 
   @media (min-width: @tablet-width) {
@@ -41,6 +47,13 @@
     line-height: 36px;
     text-align: left;
     margin-bottom: 0;
+    padding-left: 0;
+
+    &::before {
+      width: 200px;
+      height: 200px;
+      background-size: 200px 200px;
+    }
   }
 }
 
@@ -48,10 +61,22 @@
   background-image: url("../../../img/nutrition-program/cat_back.svg");
 }
 
-.nutrition-program__title--two::before {
-  width: 67px;
-  left: -11px;
-  background-image: url("../../../img/nutrition-program/cat_back-2.svg");
+.nutrition-program__title--two {
+  padding-left: 37px;
+
+  &::before {
+    width: 67px;
+    left: -10px;
+    top: 10px;
+    background-image: url("../../../img/nutrition-program/cat_back-2.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      width: 270px;
+      background-size: 270px 200px;
+    }
+  }
 }
 
 .nutrition-program__description {
@@ -59,12 +84,17 @@
   font-size: 14px;
   line-height: 18px;
   text-align: center;
+  margin: 0px;
+  flex-grow: 1;
+  padding-top: 25px;
+  text-align: left;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
     margin: 0;
     text-align: left;
+    flex-grow: 0;
   }
 }
 
@@ -79,6 +109,10 @@
   border-top: 1px solid @special-grey-two;
   position: relative;
 
+  &:active {
+    opacity: 30%;
+  }
+
   &::after {
     position: absolute;
     content: "";
@@ -91,7 +125,7 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     border: 0;
-    padding-bottom: 30px;
+    padding-top: 55px;
   }
 }
 

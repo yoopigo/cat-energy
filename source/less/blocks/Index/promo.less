@@ -79,6 +79,7 @@
   flex-direction: column;
   justify-content: flex-end;
   background-color: @basic-white;
+  padding: 0 20px;
 
   @media (min-width: @tablet-width) {
     justify-content: flex-start;
@@ -103,14 +104,15 @@
 
 .promo__product-picture {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
 
   @media (min-width: @tablet-width) {
     width: 768px;
     bottom: -29px;
     left: -98px;
+
     @media (min-width: @desktop-width) {
-      bottom: 0px;
+      bottom: 0;
     }
   }
 }
@@ -118,14 +120,11 @@
 .promo__button,
 .promo__program {
   width: 100%;
+
   @media (min-width: @desktop-width) {
     position: relative;
     background-color: @opacity-zero;
   }
-}
-
-.promo__program {
-  padding: 0 20px;
 }
 
 .promo__button {
@@ -141,6 +140,7 @@
     position: absolute;
     left: 112px;
     top: 372px;
+
     @media (min-width: @desktop-width) {
       background-color: @basic-green;
       left: -1px;

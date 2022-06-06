@@ -1,6 +1,7 @@
 .example {
   padding: 0 20px;
   background-color: @special-grey-three;
+  margin-top: 42px;
 
   @media (min-width: @tablet-width) {
     background-color: @basic-white;
@@ -36,6 +37,12 @@
 .example__title {
   .title;
   line-height: 40px;
+  font-weight: 400;
+  padding-top: 24px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 70px;
+  }
 
   @media (min-width: @desktop-width) {
     padding-bottom: 100px;
@@ -44,11 +51,14 @@
 
 .example__description {
   .basic-text;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 18px;
+  padding-bottom: 13px;
 
   @media (min-width: @tablet-width) {
     line-height: 24px;
+    font-size: 16px;
+    margin-top: 64px;
 
     @media (min-width: @desktop-width) {
       padding-bottom: 50px;
@@ -59,24 +69,51 @@
 .example__result {
   display: flex;
   justify-content: center;
-  gap: 42px;
+  gap: 34px;
 }
 
 .example__result-description {
   border: 1px solid @special-grey;
   font-family: "oswald", sans-serif;
   font-size: 24px;
-  line-height: 24px;
+  text-transform: uppercase;
   .center-flex;
+  transform: rotate(180deg);
+  width: 124px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .example__result-title {
   font-size: 12px;
-  align-items: center;
   color: @light-black;
+  text-align: center;
+  transform: rotate(180deg);
+  text-transform: lowercase;
+  padding-bottom: 3px;
 }
 
 .example__price {
-  font-size: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 14px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+  }
+}
+
+.example__result-text {
+  transform: rotate(180deg);
+}
+
+.example__result-description > .example__result-title {
+  width: 100%;
+  display: table-cell;
   text-align: center;
 }

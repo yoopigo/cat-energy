@@ -1,6 +1,7 @@
 .slider {
   min-height: 232px;
-  background-color: green;
+  background-color: @special-grey-three;
+  margin-top: 40px;
 
   @media (min-width: @tablet-width) {
     min-height: 620px;
@@ -10,6 +11,11 @@
       width: 650px;
     }
   }
+}
+
+.slider-img--before {
+  object-fit: cover;
+  width: 100%;
 }
 
 .slider--desk {

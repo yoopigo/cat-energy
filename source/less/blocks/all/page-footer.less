@@ -5,16 +5,16 @@
 .page-footer__wrapper {
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
+  padding: 20px 20px 0 20px;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 30px 30px 30px;
+    padding: 45px 30px 30px 30px;
 
     @media (min-width: @desktop-width) {
       width: 1440px;
-      padding: 0 110px;
+      padding: 42px 110px 0 110px;
       margin: 0 auto;
     }
   }
@@ -22,7 +22,15 @@
 
 .page-footer__logo {
   align-self: center;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
+
+  &:hover {
+    opacity: 70%;
+  }
+
+  &:active {
+    opacity: 40%;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 0;
@@ -43,6 +51,8 @@
 }
 
 .page-footer__social-item {
+  align-self: center;
+
   @media (min-width: @tablet-width) {
     padding-right: 30px;
 
@@ -50,6 +60,49 @@
       padding-right: 0;
     }
   }
+}
+
+.page-footer__social-item--vk:hover path,
+.page-footer__social-item--inst:hover path,
+.page-footer__html-academy:hover path {
+  fill: @basic-green;
+}
+
+.page-footer__social-item--vk:active path,
+.page-footer__social-item--inst:active path,
+.page-footer__html-academy:active path {
+  fill: @basic-green;
+  opacity: 40%;
+}
+
+.page-footer__html-academy:active {
+  opacity: 40%;
+}
+
+.page-footer__social-item--fb:hover path {
+  stroke: @basic-green;
+}
+
+.page-footer__social-item--fb:active path {
+  stroke: @basic-green;
+  opacity: 40%;
+}
+
+.page-footer__social-item--vk svg {
+  @media (min-width: @tablet-width) {
+    width: 30px;
+    height: 23px;
+  }
+}
+
+.page-footer__social-item--inst svg {
+  width: 24px;
+  height: 24px;
+}
+
+.page-footer__social-item--fb svg {
+  width: 20px;
+  height: 30px;
 }
 
 .page-footer__html-academy {

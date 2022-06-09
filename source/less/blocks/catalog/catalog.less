@@ -14,6 +14,11 @@
 
 .catalog__title {
   font-weight: 400;
+  margin-top: 34px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 64px;
+  }
 }
 
 .catalog__list {
@@ -22,11 +27,11 @@
   flex-wrap: wrap;
   padding: 0;
   justify-content: center;
-  gap: 10px;
 
   @media (min-width: @tablet-width) {
     gap: 60px;
     justify-content: flex-start;
+    margin-top: 165px;
   }
 }
 
@@ -34,6 +39,27 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr min-content;
+  padding-top: 18px;
+  height: 210px;
+  position: relative;
+
+  &::before {
+    content: "";
+    height: 1px;
+    position: absolute;
+    width: 100vh;
+    background-color: @special-grey-five;
+    top: 15px;
+    left: -295px;
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 430px;
+    margin-bottom: 78px;
+    &::before {
+      height: 0;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr;
@@ -57,6 +83,9 @@
 
   @media (min-width: @tablet-width) {
     grid-row: 1;
+    position: absolute;
+    width: 170px;
+    top: -77px;
   }
 }
 
@@ -77,6 +106,7 @@
     padding: 0;
     width: 145px;
     text-align: center;
+    padding-top: 125px;
   }
 }
 
@@ -124,10 +154,14 @@
   grid-column-end: -1;
   height: 40px;
   width: 100%;
+  margin-bottom: 11px;
   margin-top: 12px;
+  font-size: 16px;
+  line-height: 20px;
 
   @media (min-width: @tablet-width) {
-    width: 170px;
+    width: 250px;
+    margin-top: 25px;
   }
 }
 
@@ -136,6 +170,13 @@
   flex-direction: column;
   align-items: center;
   margin-top: 10px;
+
+  @media (min-width: @tablet-width) {
+    text-align: center;
+    width: 179px;
+    height: 100%;
+    justify-content: space-between;
+  }
 }
 
 .catalog__item-show {
@@ -143,6 +184,7 @@
 
   @media (min-width: @tablet-width) {
     width: 324px;
+    height: 430px;
     .center-flex;
 
     @media (min-width: @desktop-width) {
@@ -151,12 +193,24 @@
   }
 }
 
+.catalog__show-link-img {
+  padding-top: 24px;
+}
+
 .catalog__show-link-im {
   padding-top: 25px;
 }
 
 .catalog__show-link-text {
-  padding-bottom: 20px;
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 20px;
+  font-family: "Arial", sans-serif;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 .catalog__show-link-button {
@@ -170,5 +224,17 @@
 
   @media (min-width: @tablet-width) {
     width: 170px;
+  }
+}
+
+.catalog__show-link-add {
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 22px;
   }
 }

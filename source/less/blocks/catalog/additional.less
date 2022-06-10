@@ -35,21 +35,22 @@
   justify-content: space-between;
   flex-direction: column;
   border-top: 1px solid @special-grey;
-  margin-bottom: 20px;
+  height: 130px;
+  padding-bottom: 12px;
 
   &:last-child {
-    margin-bottom: 20px;
     border-bottom: 1px solid @special-grey;
   }
 
   @media (min-width: @tablet-width) {
     padding-bottom: 20px;
     margin-bottom: 0;
-    padding-left: 38px;
+    padding-left: 48px;
     padding-right: 38px;
     border-left: 1px solid @special-grey;
     border-right: 1px solid @special-grey;
     flex-direction: row;
+    min-height: 139px;
   }
 
   @media (min-width: @desktop-width) {
@@ -70,10 +71,20 @@
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
+  margin-top: 47px;
+  margin-bottom: 30px;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+    margin-top: 0;
+    padding-left: 45px;
+    margin-bottom: 80px;
+
+    @media (min-width: @desktop-width) {
+      padding-left: 0;
+      padding-top: 7px;
+    }
   }
 }
 
@@ -114,20 +125,28 @@
   }
 }
 
-.additional__button {
-  width: 100%;
-
-  @media (min-width: @desktop-width) {
-    width: 244px;
-    height: 40px;
-  }
+.additional__text--name,
+.additional__text--price {
+  align-self: center;
 }
 
-.additional__button--last-item {
-  margin-bottom: 20px;
+.additional__text--price {
+  padding-right: 15px;
+}
+
+.additional__button {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  line-height: 20px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 0;
+    margin-right: 17px;
+
+    @media (min-width: @desktop-width) {
+      width: 244px;
+      height: 40px;
+    }
   }
 }
 

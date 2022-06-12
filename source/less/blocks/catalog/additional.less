@@ -108,16 +108,19 @@
   font-size: 14px;
   line-height: 14px;
   font-family: "Arial", sans-serif;
+  margin-top: 5px;
 
   @media (min-width: @tablet-width) {
     gap: 50px;
     font-size: 16px;
     line-height: 20px;
+    margin-bottom: 0;
 
     @media (min-width: @desktop-width) {
       min-width: 300px;
       margin: 0;
       gap: 0;
+      padding-left: 40px;
     }
   }
 }
@@ -136,18 +139,6 @@
     @media (min-width: @desktop-width) {
       min-width: 160px;
       margin: 0;
-    }
-  }
-}
-
-.additional__text {
-  margin-top: 5px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 0;
-
-    @media (min-width: @desktop-width) {
-      padding-left: 40px;
     }
   }
 }

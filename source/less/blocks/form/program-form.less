@@ -29,6 +29,7 @@
     border: 1px solid @special-grey-four;
     justify-content: space-evenly;
   }
+
   @media (min-width: @desktop-width) {
     border: 1px solid @special-grey-four;
     display: flex;
@@ -46,7 +47,9 @@
 }
 
 .program-form--selection {
-  width: 615px;
+  @media (min-width: @tablet-width) {
+    width: 615px;
+  }
 }
 
 .program-form__item {
@@ -69,6 +72,7 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
   }
+
   @media (min-width: @desktop-width) {
     margin: 0;
     padding-left: 28px;
@@ -177,10 +181,20 @@
 }
 
 .program__form--area {
-  margin-right: 85px;
+  margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 85px;
+    margin-bottom: 105px;
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 65px;
+    }
+  }
 }
 
 .program__form-area {
+  min-width: 280px;
   min-height: 150px;
   width: 100%;
   padding-top: 10px;
@@ -200,21 +214,31 @@
   border: 0;
   margin: 0;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 25px;
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 32px;
+    }
+  }
 }
 
 .program-form__list--additional {
   gap: 12px;
+  margin-bottom: 22px;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    gap: 25px;
   }
 
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: row;
-    gap: 120px;
+    gap: 150px;
   }
 }
 
@@ -238,6 +262,11 @@
   border: 1px solid @special-grey;
   border-radius: 10%;
   margin-right: 15px;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .program-form__input--additional:checked + label::after {
@@ -249,7 +278,7 @@
   left: 6px;
 
   @media (min-width: @tablet-width) {
-    left: 5px;
+    left: 11px;
   }
 }
 
@@ -257,11 +286,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-left: 40px;
+
+    @media (min-width: @desktop-width) {
+      padding-left: 0;
+      margin-bottom: 80px;
+    }
   }
 }
 
@@ -270,10 +305,12 @@
   height: 40px;
   font-size: 16px;
   line-height: 20px;
+  border: 0;
 
   @media (min-width: @tablet-width) {
     width: 280px;
     height: 52px;
+    font-size: 20px;
 
     @media (min-width: @desktop-width) {
       width: 570px;
@@ -285,8 +322,16 @@
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
+  margin-top: 20px;
+  margin-bottom: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+    margin: 0;
+  }
 
   @media (min-width: @desktop-width) {
-    padding-left: 10px;
+    padding-left: 40px;
   }
 }

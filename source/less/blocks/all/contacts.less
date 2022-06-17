@@ -1,11 +1,12 @@
 .contacts {
   padding: 0 20px;
-  margin-top: 70px;
+  margin-top: 85px;
   margin-bottom: 10px;
 
   @media (min-width: @tablet-width) {
     padding: 0 30px;
     margin-bottom: 45px;
+    margin-top: 73px;
 
     @media (min-width: @desktop-width) {
       margin: 0;
@@ -56,6 +57,7 @@
     font-size: 16px;
     text-align: right;
     margin-top: 0;
+    padding-right: 33px;
   }
 }
 
@@ -69,5 +71,13 @@
 
   @media (min-width: @desktop-width) {
     height: 400px;
+  }
+}
+
+.contacts__address-br {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
   }
 }

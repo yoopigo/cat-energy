@@ -82,14 +82,23 @@ const copyImages = () => {
 
 exports.copyImages = copyImages;
 
-const createWebp = () => {
+const createWebpCatalog = () => {
   return gulp
-    .src("source/img/**/*.{png,jpg}")
+    .src("source/img/catalog/*.{png,jpg}")
     .pipe(webp({ quality: 90 }))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("build/img/catalog"));
 };
 
-exports.createWebp = createWebp;
+exports.createWebpCatalog = createWebpCatalog;
+
+const createWebPromo = () => {
+  return gulp
+    .src("source/img/promo/*.{png,jpg}")
+    .pipe(webp({ quality: 90 }))
+    .pipe(gulp.dest("build/img/promo"));
+};
+
+exports.createWebPromo = createWebPromo;
 
 //Fonts
 
@@ -144,17 +153,25 @@ exports.server = server;
 
 // Watcher
 
+const reload = (done) => {
+  sync.reload();
+  done();
+};
+
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/js/*.js", gulp.series("scripts"));
-  gulp.watch("source/*.html").on("change,html", sync.reload);
+  gulp.watch("source/less/**/*.less", gulp.series(styles));
+  gulp.watch("source/js/*.js", gulp.series(scripts));
+  gulp.watch("source/*.html", gulp.series(html, reload));
 };
 
 //Builds
 
 const allCopy = gulp.parallel(copyFonts, copyOther, copyOther2, copyNormalize);
 
+const createWebp = gulp.parallel(createWebpCatalog, createWebPromo);
+
 exports.allCopy = allCopy;
+exports.createWebp = createWebp;
 
 const build = gulp.series(
   clean,

@@ -9,6 +9,9 @@
     <link rel="icon" href="img/icon/32.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="img/icon/180x180.png" />
     <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="preload" href="fonts/oswaldmedium.woff" as="font" />
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" />
+
     <title>Здоровое питание для котов Cat Energy</title>
   </head>
 
@@ -94,6 +97,29 @@
             <div class="promo__program">
               <div class="promo__product">
                 <picture class="promo__product-picture">
+                  <source
+                    type="image/webp"
+                    media="(min-width: 1440px)"
+                    srcset="
+                      img/promo/product-desc.webp    1x,
+                      img/promo/product-desc@2x.webp 2x
+                    "
+                  />
+                  <source
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                    srcset="
+                      img/promo/product-tablet.webp    1x,
+                      img/promo/product-tablet@2x.webp 2x
+                    "
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="
+                      img/promo/product.webp    1x,
+                      img/promo/product@2x.webp 2x
+                    "
+                  />
                   <source
                     media="(min-width: 1440px)"
                     srcset="

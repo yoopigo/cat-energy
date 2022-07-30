@@ -300,21 +300,37 @@
               </div>
             </div>
           </div>
+
           <div class="slider">
             <div class="slider--wrap">
               <picture class="slider__pic">
                 <img
-                  class="slider__img--before"
+                  class="slider__img--before slider__pic--cat-skinny-fat"
                   src="img/slider/cat-fat.png"
                   srcset="img/slider/cat-fat@2x.png @2x.png 2x"
                   alt=""
                 />
               </picture>
+              <picture class="slider__pic">
+                <img
+                  class="slider__img--before slider__pic--cat-skinny-img"
+                  src="img/slider/cat-skinny.png"
+                  srcset="img/slider/cat-skinny.png@2x.png @2x.png 2x"
+                  alt=""
+                />
+              </picture>
             </div>
             <div class="slider__control">
-              <span>Было</span>
-              <div>Линейка</div>
-              <span>Стало</span>
+              <button class="slider__button">БЫЛО</button>
+              <div class="slider__progress-bar">
+                <div
+                  class="slider__indication-bar slider__indication-bar--left"
+                ></div>
+                <div
+                  class="slider__indication-bar slider__indication-bar--right"
+                ></div>
+              </div>
+              <button class="slider__button">СТАЛО</button>
             </div>
           </div>
         </section>

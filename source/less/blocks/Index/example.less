@@ -1,3 +1,11 @@
+.back {
+  background: linear-gradient(
+    to top,
+    @special-grey-three 71%,
+    @basic-white 29%
+  );
+}
+
 .example {
   padding: 0 20px;
   background-color: @special-grey-three;
@@ -13,6 +21,11 @@
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
+      background: linear-gradient(
+        to top,
+        @special-grey-three 71%,
+        @basic-white 29%
+      );
     }
   }
 }
@@ -57,7 +70,7 @@
   .basic-text;
   font-size: 14px;
   line-height: 18px;
-  padding-bottom: 13px;
+  padding-bottom: 12px;
 
   @media (min-width: @tablet-width) {
     line-height: 24px;
@@ -153,13 +166,10 @@
 
 .example__result-text {
   transform: rotate(180deg);
-  text-align: center;
 }
 
 .example__result-description > .example__result-title {
   width: 100%;
-  display: table-cell;
-  text-align: center;
 }
 
 .example__price--text {

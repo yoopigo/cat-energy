@@ -22,8 +22,9 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: start;
-    gap: 24px;
+    justify-content: flex-start;
+    column-gap: 134px;
+    row-gap: 36px;
 
     @media (min-width: @desktop-width) {
       gap: 73px;
@@ -36,14 +37,15 @@
   gap: 20px;
 
   @media (min-width: @tablet-width) {
+    display: block;
     flex-direction: column;
     align-items: start;
     max-width: 250px;
     height: 280px;
     flex: auto;
     justify-content: space-evenly;
-    margin: 0 92px 0 0;
-    padding: 10px 0 0 0;
+    margin: 0;
+    padding: 38px 0 0 0;
     background-repeat: no-repeat;
     background-position: right;
 
@@ -56,25 +58,28 @@
 .advantages__item-one {
   @media (min-width: @tablet-width) {
     background-image: url("../../../img/advantages/one.png");
-    background-position-x: 135px;
+    background-position: 126px 38px;
   }
 }
 
 .advantages__item-two {
   @media (min-width: @tablet-width) {
     background-image: url("../../../img/advantages/two.png");
+    background-position: 122px 34px;
   }
 }
 
 .advantages__item-three {
   @media (min-width: @tablet-width) {
     background-image: url("../../../img/advantages/three.png");
+    background-position: 123px 38px;
   }
 }
 
 .advantages__item-four {
   @media (min-width: @tablet-width) {
     background-image: url("../../../img/advantages/four.png");
+    background-position: 123px 37px;
   }
 }
 
@@ -87,6 +92,7 @@
   @media (min-width: @tablet-width) {
     width: 80px;
     height: 80px;
+    margin-bottom: 30px;
   }
 }
 

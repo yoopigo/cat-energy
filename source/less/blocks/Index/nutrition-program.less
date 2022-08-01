@@ -46,7 +46,7 @@
     line-height: 36px;
     text-align: left;
     margin-bottom: 0;
-    padding: 35px 0 0 20px;
+    padding-left: 20px;
 
     @media (min-width: @desktop-width) {
       text-align: center;
@@ -85,7 +85,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding: 35px 0 0 20px;
+    padding-left: 20px;
 
     &::before {
       background-image: none;
@@ -122,9 +122,9 @@
     line-height: 24px;
     margin: 0;
     flex-grow: 0;
-    padding: 0 0 35px 20px;
+    padding: 0 0 40px 20px;
     position: relative;
-    padding-right: 255px;
+    padding-right: 221px;
 
     &::before {
       content: "";
@@ -145,8 +145,8 @@
   @media (min-width: @tablet-width) {
     &::before {
       background-image: url("../../../img/nutrition-program/cat_back.svg");
-      right: 41px;
-      bottom: -17px;
+      right: 10px;
+      bottom: -10px;
     }
 
     @media (min-width: @desktop-width) {
@@ -159,16 +159,16 @@
 
 .nutrition-program__description-two {
   @media (min-width: @tablet-width) {
-    padding-right: 291px;
+    padding-right: 264px;
     position: relative;
-    padding-bottom: 35px;
+    padding-bottom: 39px;
 
     &::before {
       background-image: url("../../../img/nutrition-program/cat_back-2.svg");
       width: 270px;
       background-size: 270px 200px;
-      top: -48px;
-      right: 10px;
+      top: -51px;
+      right: -22px;
     }
 
     @media (min-width: @desktop-width) {
@@ -208,7 +208,7 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     border: 0;
-    padding-bottom: 50px;
+    padding-bottom: 54px;
     padding-left: 20px;
 
     &::after {
@@ -217,6 +217,14 @@
 
     @media (min-width: @desktop-width) {
       padding-bottom: 33px;
+    }
+  }
+}
+
+.nutrition-program__button--two {
+  @media (min-width: @tablet-width) {
+    &::after {
+      left: 147px;
     }
   }
 }

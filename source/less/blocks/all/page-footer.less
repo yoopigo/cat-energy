@@ -47,7 +47,20 @@
   @media (min-width: @tablet-width) {
     border: 0;
     padding: 0;
+    flex-wrap: wrap;
   }
+}
+
+.page-footer__social-item--vk {
+  padding-left: 34px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+  }
+}
+
+.page-footer__social-item--fb {
+  padding-right: 42px;
 }
 
 .page-footer__social-item {
@@ -60,14 +73,6 @@
       padding-right: 0;
     }
   }
-}
-
-.page-footer__social-item--vk {
-  padding-left: 34px;
-}
-
-.page-footer__social-item--fb {
-  padding-right: 42px;
 }
 
 .page-footer__social-item--vk:hover path,
@@ -123,7 +128,7 @@
   line-height: 18px;
   display: flex;
   justify-content: center;
-  column-gap: 139px;
+  column-gap: 138px;
   align-items: center;
   padding-top: 21px;
   padding-bottom: 15px;
@@ -131,6 +136,9 @@
 
   @media (min-width: @tablet-width) {
     border: 0;
+    column-gap: 2px;
+    padding-bottom: 7px;
+    padding-top: 0;
   }
 }
 

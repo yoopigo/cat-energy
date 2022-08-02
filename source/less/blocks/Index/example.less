@@ -1,19 +1,15 @@
-.back {
-  background: linear-gradient(
-    to top,
-    @special-grey-three 71%,
-    @basic-white 29%
-  );
+.background {
+  background: linear-gradient(to top, #eaeaea 71%, white 29%);
 }
 
 .example {
   padding: 0 20px;
-  background-color: @special-grey-three;
+  background-color: #eaeaea;
   margin-top: 42px;
 
   @media (min-width: @tablet-width) {
-    background-color: @basic-white;
     padding: 0 30px;
+    background: linear-gradient(to top, #eaeaea 42.7%, white 29%);
 
     @media (min-width: @desktop-width) {
       padding: 0 110px;
@@ -21,19 +17,20 @@
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      background: linear-gradient(
-        to top,
-        @special-grey-three 71%,
-        @basic-white 29%
-      );
+      background: linear-gradient(to top, #eaeaea 71%, white 29%);
     }
   }
 }
 
 .example__wrapper {
+  @media (min-width: @tablet-width) {
+    background-color: @basic-white;
+  }
+
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    background: linear-gradient(to top, #eaeaea 71%, white 29%);
   }
 }
 

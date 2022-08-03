@@ -44,6 +44,10 @@
     width: 485px;
     margin-left: auto;
     padding-top: 5px;
+
+    @media (min-width: @desktop-width) {
+      width: 502px;
+    }
   }
 }
 
@@ -115,6 +119,7 @@
 
       @media (min-width: @desktop-width) {
         background: @basic-white;
+        bottom: -6px;
       }
     }
   }

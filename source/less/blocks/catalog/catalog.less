@@ -1,3 +1,13 @@
+.catalog {
+  @media (min-width: @tablet-width) {
+    margin-bottom: -11px;
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 4px;
+    }
+  }
+}
+
 .catalog__wrapper {
   padding: 0 20px;
 
@@ -20,7 +30,7 @@
     margin-top: 64px;
 
     @media (min-width: @desktop-width) {
-      margin-top: 75px;
+      margin-top: 72px;
     }
   }
 }
@@ -37,6 +47,7 @@
     justify-content: flex-start;
     margin-top: 165px;
     margin-bottom: 0;
+    row-gap: 62px;
 
     @media (min-width: @desktop-width) {
       gap: 80px;
@@ -96,7 +107,13 @@
     grid-row: 1;
     position: absolute;
     width: 170px;
-    top: -77px;
+    top: -125px;
+  }
+}
+
+.catalog__item-img-container--small-img {
+  @media (min-width: @tablet-width) {
+    top: -98px;
   }
 }
 
@@ -118,7 +135,7 @@
     padding: 0;
     width: 145px;
     text-align: center;
-    padding-top: 125px;
+    padding-top: 127px;
   }
 }
 
@@ -182,7 +199,7 @@
     margin-top: 25px;
 
     @media (min-width: @desktop-width) {
-      width: 158px;
+      width: 170px;
     }
   }
 }
@@ -223,7 +240,7 @@
   padding-top: 15px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 51px;
+    padding-top: 47px;
 
     & svg {
       width: 60px;
@@ -231,7 +248,7 @@
     }
 
     @media (min-width: @desktop-width) {
-      padding-top: 43px;
+      padding-top: 47px;
     }
   }
 }
@@ -250,10 +267,10 @@
     font-size: 16px;
     line-height: 18px;
     margin: 0;
-    padding-bottom: 52px;
+    padding-bottom: 63px;
 
     @media (min-width: @desktop-width) {
-      padding-bottom: 68px;
+      padding-bottom: 65px;
     }
   }
 }
@@ -278,11 +295,11 @@
 
   @media (min-width: @tablet-width) {
     width: 250px;
-    margin-bottom: 35px;
+    margin-bottom: 42px;
 
     @media (min-width: @desktop-width) {
       width: 169px;
-      margin-bottom: 45px;
+      margin-bottom: 41px;
     }
   }
 }
@@ -297,10 +314,10 @@
     font-size: 20px;
     line-height: 22px;
     margin-top: 0;
-    padding-top: 19px;
+    padding-top: 22px;
 
     @media (min-width: @desktop-width) {
-      padding-top: 30px;
+      padding-top: 25px;
     }
   }
 }

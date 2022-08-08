@@ -200,10 +200,13 @@
   &::after {
     position: absolute;
     content: "";
-    width: 24px;
+    width: 26px;
     height: 12px;
     background-image: url("../../../img/nutrition-program/icon-arrow.svg");
     left: 100px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    transition-duration: 400ms;
   }
 
   @media (min-width: @tablet-width) {
@@ -221,6 +224,10 @@
       padding-left: 16px;
     }
   }
+}
+
+.nutrition-program__button:hover::after {
+  width: 32px;
 }
 
 .nutrition-program__button--two {

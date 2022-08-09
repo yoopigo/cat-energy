@@ -110,6 +110,8 @@
                       type="text"
                       name="Имя кота"
                       placeholder="Барсик"
+                      required
+                      oninvalid="setCustomValidity('Введите имя вашего котика')"
                     />
                   </li>
 
@@ -125,6 +127,9 @@
                       type="text"
                       name="Вес кота"
                       placeholder="7"
+                      required
+                      oninvalid="setCustomValidity('Введите вес вашего котика')"
+                      pattern="[0-9]{0,3}"
                     />
                   </li>
 
@@ -140,6 +145,9 @@
                       type="text"
                       name="Возраст кота"
                       placeholder="7"
+                      required
+                      oninvalid="setCustomValidity('Введите возраст вашего котика')"
+                      pattern="[0-9]{0,3}"
                     />
                   </li>
                 </ul>
@@ -214,11 +222,13 @@
                     >E-mail*</label
                   >
                   <input
-                    class="program-form__input data-onwer__input"
+                    class="program-form__input data-onwer__input input-email"
                     id="email-owner"
                     type="email"
                     name="E-mail владельца"
                     placeholder="кuklachev@gmail.com"
+                    required
+                    oninvalid="setCustomValidity('Введите ваш e-mail')"
                   />
                 </li>
                 <li
@@ -232,6 +242,9 @@
                     id="phone-owner"
                     type="tel"
                     name="Телефон владельца"
+                    placeholder="8 (960) 900-60-90"
+                    required
+                    oninvalid="setCustomValidity('Введите ваш номер телефона')"
                   />
                 </li>
               </ul>
@@ -429,7 +442,6 @@
       </footer>
     </div>
     <script src="js/inputmask.js"></script>
-    <script src="js/just-validate.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

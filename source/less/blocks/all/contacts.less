@@ -27,6 +27,7 @@
 .contacts__wrapper {
   display: flex;
   justify-content: space-between;
+  z-index: 1;
 
   @media (min-width: @tablet-width) {
     padding: 0 40px;
@@ -78,7 +79,7 @@
 }
 
 .contacts__map {
-  width: 100%;
+  width: 100vw;
   height: 370px;
 
   @media (min-width: @tablet-width) {
@@ -96,4 +97,8 @@
   @media (min-width: @tablet-width) {
     display: block;
   }
+}
+
+[class*="copyrights-pane"] {
+  display: none;
 }

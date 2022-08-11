@@ -61,4 +61,18 @@ function maskInput() {
   }
 }
 
-///
+///Map
+ymaps.ready(function () {
+  var myMap = new ymaps.Map("yaMap", {
+    center: [59.93863506417266, 30.323117499999945],
+    zoom: 19,
+    controls: [],
+  });
+  map.controls.remove("geolocationControl"); 
+  map.controls.remove("searchControl"); 
+  map.controls.remove("trafficControl"); 
+  map.controls.remove("typeSelector"); /
+  map.controls.remove("fullscreenControl");
+  map.controls.remove("zoomControl"); 
+  map.controls.remove("rulerControl"); 
+});

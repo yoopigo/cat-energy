@@ -68,11 +68,18 @@ ymaps.ready(function () {
     zoom: 19,
     controls: [],
   });
-  map.controls.remove("geolocationControl"); 
-  map.controls.remove("searchControl"); 
-  map.controls.remove("trafficControl"); 
-  map.controls.remove("typeSelector"); /
-  map.controls.remove("fullscreenControl");
-  map.controls.remove("zoomControl"); 
-  map.controls.remove("rulerControl"); 
+
+  myPlacemark = new ymaps.Placemark(
+    [59.93863506417266, 30.323117499999945],
+    {},
+    {
+      iconLayout: "default#image",
+      iconImageHref: "../img/map/mapPin.png",
+      iconImageSize: [113, 106],
+      iconImageOffset: [-60, -105],
+    }
+  );
+
+  // Добавление метки на карту
+  myMap.geoObjects.add(myPlacemark);
 });

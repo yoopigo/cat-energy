@@ -46,7 +46,6 @@ function maskInput() {
       )
         break;
 
-      // Found a literal
       while (mask[maskIndex].match(literalPattern) === null) {
         if (value[valueIndex] === mask[maskIndex]) break;
         newValue += mask[maskIndex++];
@@ -80,6 +79,30 @@ ymaps.ready(function () {
     }
   );
 
-  // Добавление метки на карту
   myMap.geoObjects.add(myPlacemark);
+});
+
+//Slider
+
+let sliderButtonLeft = document.querySelector(".slider__button--left");
+let sliderButtonRight = document.querySelector(".slider__button--right");
+let slideLeft = document.querySelector(".slider__indication-bar--left");
+let slideRight = document.querySelector(".slider__indication-bar--right");
+let fatCat = document.querySelector(".slider__pic--cat-skinny-fat");
+let skinnyCat = document.querySelector(".slider__pic--cat-skinny-img");
+
+sliderButtonRight.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  skinnyCat.classList.remove("slider__off");
+  fatCat.classList.add("slider__off");
+  slideRight.style = "background-color: #68b738;";
+  slideLeft.style = "background-color: white";
+});
+
+sliderButtonLeft.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  skinnyCat.classList.add("slider__off");
+  fatCat.classList.remove("slider__off");
+  slideRight.style = "background-color: white;";
+  slideLeft.style = "background-color :#68b738";
 });

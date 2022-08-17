@@ -316,23 +316,25 @@
               <div class="slider--wrap">
                 <picture class="slider__pic">
                   <img
+                    class="slider__img--before slider__pic--cat-skinny-img slider__off"
+                    src="img/slider/cat-skinny.png"
+                    srcset="img/slider/cat-skinny.png@2x.png @2x.png 2x"
+                    alt=""
+                  />
+                </picture>
+                <picture class="slider__pic">
+                  <img
                     class="slider__img--before slider__pic--cat-skinny-fat"
                     src="img/slider/cat-fat.png"
                     srcset="img/slider/cat-fat@2x.png @2x.png 2x"
                     alt=""
                   />
                 </picture>
-                <picture class="slider__pic">
-                  <img
-                    class="slider__img--before slider__pic--cat-skinny-img"
-                    src="img/slider/cat-skinny.png"
-                    srcset="img/slider/cat-skinny.png@2x.png @2x.png 2x"
-                    alt=""
-                  />
-                </picture>
               </div>
               <div class="slider__control">
-                <button class="slider__button">БЫЛО</button>
+                <button class="slider__button slider__button--left">
+                  БЫЛО
+                </button>
                 <div class="slider__progress-bar">
                   <div
                     class="slider__indication-bar slider__indication-bar--left"
@@ -344,7 +346,9 @@
                     class="slider__indication-bar slider__indication-bar--center"
                   ></div>
                 </div>
-                <button class="slider__button">СТАЛО</button>
+                <button class="slider__button slider__button--right">
+                  СТАЛО
+                </button>
               </div>
             </div>
           </section>
@@ -444,5 +448,7 @@
     </div>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=fa46f817-55b2-4b97-9ed6-76a3dba373f6&lang=ru_RU"></script>
     <script src="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="draggable-jquery-ui-min.js"></script>
   </body>
 </html>

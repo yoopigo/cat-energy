@@ -23,7 +23,6 @@
     background: linear-gradient(to top, #eaeaea 66%, white 34%);
     height: 542px;
     overflow: hiden;
-    position: relative;
 
     @media (min-width: @desktop-width) {
       width: 650px;
@@ -49,6 +48,11 @@
   @media (min-width: @tablet-width) {
     height: 510px;
     object-fit: cover;
+    background: linear-gradient(to top, #eaeaea 67%, white 34%);
+
+    @media (min-width: @desktop-width) {
+      background: linear-gradient(to top, #eaeaea 66%, white 34%);
+    }
   }
 }
 
@@ -149,5 +153,11 @@
     border: 1px solid @special-grey-seven;
     border-radius: 50%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.slider__pic--cat-skinny-fat {
+  @media (min-width: @tablet-width) {
+    object-position: left;
   }
 }

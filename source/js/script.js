@@ -88,8 +88,8 @@ let sliderButtonLeft = document.querySelector(".slider__button--left");
 let sliderButtonRight = document.querySelector(".slider__button--right");
 let slideLeft = document.querySelector(".slider__indication-bar--left");
 let slideRight = document.querySelector(".slider__indication-bar--right");
-let fatCat = document.querySelector(".slider__pic--cat-skinny-fat");
-let skinnyCat = document.querySelector(".slider__pic--cat-skinny-img");
+let fatCat = document.querySelector(".slider-slide--one");
+let skinnyCat = document.querySelector(".slider-silde--two");
 
 sliderButtonRight.addEventListener("click", function (evt) {
   evt.preventDefault();

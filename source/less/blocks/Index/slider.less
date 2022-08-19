@@ -3,7 +3,6 @@
 
   @media (min-width: @tablet-width) {
     padding-bottom: 55px;
-    background-color: @special-grey-three;
 
     @media (min-width: @desktop-width) {
       height: 657px;
@@ -22,7 +21,8 @@
   @media (min-width: @tablet-width) {
     background: linear-gradient(to top, #eaeaea 66%, white 34%);
     height: 542px;
-    overflow: hiden;
+    overflow: visible;
+    width: 705px;
 
     @media (min-width: @desktop-width) {
       width: 650px;
@@ -33,11 +33,37 @@
   }
 }
 
+.slider-slide {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    display: flex;
+  }
+}
+
+.slider-slide--one {
+  @media (min-width: @tablet-width) {
+    z-index: 1;
+    left: 17px;
+    width: 50%;
+  }
+}
+
+.slider-silde--two {
+  @media (min-width: @tablet-width) {
+    left: 115px;
+    align-items: flex-end;
+    width: 50%;
+  }
+}
+
 .slider__pic {
   @media (min-width: @tablet-width) {
     display: flex;
-    justify-content: center;
-    position: absolute;
+    background: linear-gradient(to top, #eaeaea 67%, white 35%);
+
+    @media (min-width: @desktop-width) {
+      background: linear-gradient(to top, #eaeaea 66%, white 35%);
+    }
   }
 }
 
@@ -48,16 +74,14 @@
   @media (min-width: @tablet-width) {
     height: 510px;
     object-fit: cover;
-    background: linear-gradient(to top, #eaeaea 67%, white 34%);
-
-    @media (min-width: @desktop-width) {
-      background: linear-gradient(to top, #eaeaea 66%, white 34%);
-    }
   }
 }
 
 .slider__off {
   display: none;
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
 }
 
 .slider--desk {
@@ -156,7 +180,7 @@
   }
 }
 
-.slider__pic--cat-skinny-fat {
+.slider__pic--cat-fat {
   @media (min-width: @tablet-width) {
     object-position: left;
   }

@@ -106,3 +106,46 @@ sliderButtonLeft.addEventListener("click", function (evt) {
   slideRight.style = "background-color: white;";
   slideLeft.style = "background-color :#68b738";
 });
+
+//Slider desctop
+
+(function ($) {
+  // получаем доступ к элементу слайдера на странице
+  let $dragMe = $(".slider__indication-bar--center"),
+    // к слайдеру
+    $container = $(".slider--wrap"),
+    // и картинке слева
+    $viewAfter = $(".slider-silde--two");
+  // используем свойство draggable из библиотеки с интерфейсом, чтобы получить координаты сдвига слайдера
+  $dragMe.draggable({
+    containment: "parent",
+    axis: "x",
+    drag: function () {
+      // при перемещении слайдера меняем ширину картинки слева в стилях
+      $viewAfter.css({
+        width: parseFloat($(this).css("left") + 145) * 1.64,
+      });
+    },
+  });
+  // добавляем реакцию на клик по картинке
+
+  // функция сдвига слайдера при клике, на входе получаем новые координаты границы картинок
+  function animateTo(_left) {
+    // анимируем сдвиг слайдера
+    $dragMe.animate(
+      {
+        left: _left,
+      },
+      "slow",
+      "linear"
+    );
+    // и картинки
+    $viewAfter.animate(
+      {
+        width: _left,
+      },
+      "slow",
+      "linear"
+    );
+  }
+})(jQuery);

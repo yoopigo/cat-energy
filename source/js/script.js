@@ -90,6 +90,9 @@ let slideLeft = document.querySelector(".slider__indication-bar--left");
 let slideRight = document.querySelector(".slider__indication-bar--right");
 let fatCat = document.querySelector(".slider-slide--one");
 let skinnyCat = document.querySelector(".slider-silde--two");
+let centerBar = document.querySelector(".slider__indication-bar--center");
+let slideOne = document.querySelector(".slider-slide--one");
+let slideTwo = document.querySelector(".slider-silde--two");
 
 sliderButtonRight.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -97,6 +100,8 @@ sliderButtonRight.addEventListener("click", function (evt) {
   fatCat.classList.add("slider__off");
   slideRight.style = "background-color: #68b738;";
   slideLeft.style = "background-color: white";
+  centerBar.style = "left: 402px";
+  slideTwo.style = "width: 659px";
 });
 
 sliderButtonLeft.addEventListener("click", function (evt) {
@@ -105,33 +110,28 @@ sliderButtonLeft.addEventListener("click", function (evt) {
   fatCat.classList.remove("slider__off");
   slideRight.style = "background-color: white;";
   slideLeft.style = "background-color :#68b738";
+  centerBar.style = "left: 0px";
+  slideTwo.style = "width: 0px";
 });
 
 //Slider desctop
 
 (function ($) {
-  // получаем доступ к элементу слайдера на странице
   let $dragMe = $(".slider__indication-bar--center"),
-    // к слайдеру
     $container = $(".slider--wrap"),
-    // и картинке слева
     $viewAfter = $(".slider-silde--two");
-  // используем свойство draggable из библиотеки с интерфейсом, чтобы получить координаты сдвига слайдера
+
   $dragMe.draggable({
     containment: "parent",
     axis: "x",
     drag: function () {
-      // при перемещении слайдера меняем ширину картинки слева в стилях
       $viewAfter.css({
         width: parseFloat($(this).css("left") + 145) * 1.64,
       });
     },
   });
-  // добавляем реакцию на клик по картинке
 
-  // функция сдвига слайдера при клике, на входе получаем новые координаты границы картинок
   function animateTo(_left) {
-    // анимируем сдвиг слайдера
     $dragMe.animate(
       {
         left: _left,
@@ -139,7 +139,7 @@ sliderButtonLeft.addEventListener("click", function (evt) {
       "slow",
       "linear"
     );
-    // и картинки
+
     $viewAfter.animate(
       {
         width: _left,

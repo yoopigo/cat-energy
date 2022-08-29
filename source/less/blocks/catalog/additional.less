@@ -1,6 +1,4 @@
 .additional {
-  margin-bottom: 50px;
-
   @media (min-width: @tablet-width) {
     margin-bottom: 140px;
 
@@ -28,6 +26,9 @@
 .additional__list {
   list-style: none;
   padding: 0;
+  overflow: hidden;
+  max-width: 87vw;
+  margin-bottom: 37px;
 
   @media (min-width: @desktop-width) {
     grid-column-start: 1;
@@ -38,16 +39,13 @@
 
 .additional__item {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   flex-direction: column;
   border-top: 1px solid @special-grey;
-  height: 130px;
-  padding-bottom: 20px;
+  padding-bottom: 19px;
 
   &:last-child {
     border-bottom: 1px solid @special-grey;
-    margin-bottom: 35px;
   }
 
   @media (min-width: @tablet-width) {
@@ -86,7 +84,7 @@
   line-height: 24px;
   font-weight: 400;
   margin-top: 50px;
-  margin-bottom: 36px;
+  margin-bottom: 37px;
 
   @media (min-width: @tablet-width) {
     font-size: 36px;
@@ -135,7 +133,7 @@
   text-transform: uppercase;
   font-weight: 400;
   margin-bottom: 7px;
-  margin-top: 12px;
+  margin-top: 13px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -197,7 +195,10 @@
   font-size: 16px;
   line-height: 20px;
   .center-flex;
+  display: flex;
   text-align: center;
+  overflow: hidden;
+  max-width: 87vw;
 
   @media (min-width: @tablet-width) {
     height: 200px;
@@ -215,7 +216,7 @@
 }
 
 .additional__promotion-text {
-  padding-top: 150px;
+  padding-top: 144px;
   position: relative;
 
   &::before {
@@ -225,8 +226,8 @@
     height: 80px;
     width: 78px;
     background-image: url("../../../img/additional/icon-gift.svg");
-    top: 20px;
-    left: 40px;
+    top: 15px;
+    left: 25%;
   }
 
   @media (min-width: @tablet-width) {

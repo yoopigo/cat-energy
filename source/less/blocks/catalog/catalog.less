@@ -25,6 +25,8 @@
 .catalog__title {
   font-weight: 400;
   margin-top: 34px;
+  overflow: hidden;
+  max-width: 87vw;
 
   @media (min-width: @tablet-width) {
     margin-top: 64px;
@@ -59,8 +61,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr min-content;
-  padding-top: 18px;
-  height: 209px;
+  padding-top: 12px;
   position: relative;
 
   &::before {
@@ -101,7 +102,7 @@
   grid-row-start: 1;
   grid-row-end: 3;
   .center-flex;
-  padding-top: 33px;
+  padding-top: 20px;
 
   @media (min-width: @tablet-width) {
     grid-row: 1;
@@ -126,8 +127,9 @@
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
-  padding-right: 50px;
-  margin-bottom: 13px;
+  padding: 23px 50px 10px 0;
+  margin: 0;
+  overflow: hidden;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -165,6 +167,12 @@
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
+  overflow: hidden;
+  max-width: 35vw;
+}
+
+.catalog__item-information {
+  padding-bottom: 15px;
 }
 
 .catalog__item-information td {
@@ -172,6 +180,7 @@
   line-height: 16px;
   font-family: "arial", sans-serif;
   font-weight: 400;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
@@ -190,7 +199,6 @@
   height: 40px;
   width: 100%;
   margin-bottom: 11px;
-  margin-top: 12px;
   font-size: 16px;
   line-height: 20px;
 
@@ -209,6 +217,8 @@
   flex-direction: column;
   align-items: center;
   margin-top: 10px;
+  overflow: hidden;
+  max-width: 87vw;
 
   @media (min-width: @tablet-width) {
     text-align: center;
@@ -261,7 +271,7 @@
   font-size: 12px;
   line-height: 16px;
   font-family: "Arial", sans-serif;
-  margin: 7px 0 20px 0;
+  margin: 7px 0 22px 0;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;

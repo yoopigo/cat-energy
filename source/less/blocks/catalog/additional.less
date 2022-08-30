@@ -30,10 +30,15 @@
   max-width: 87vw;
   margin-bottom: 37px;
 
+  @media (min-width: @tablet-width) {
+    max-width: 100%;
+  }
+
   @media (min-width: @desktop-width) {
     grid-column-start: 1;
     margin: 0;
     padding: 0;
+    margin-left: -7px;
   }
 }
 
@@ -55,12 +60,14 @@
     padding-right: 21px;
     border-left: 1px solid @special-grey;
     border-right: 1px solid @special-grey;
-    flex-direction: row;
     height: 148px;
+    flex-direction: row;
+    flex-wrap: wrap;
+
     margin-bottom: -9px;
 
     &:last-child {
-      margin-bottom: 60px;
+      margin-bottom: 23px;
     }
   }
 
@@ -70,7 +77,7 @@
     padding: 0;
     height: 81px;
     align-items: center;
-    column-gap: 39px;
+    flex-direction: row;
 
     &:last-child {
       margin-bottom: -2px;
@@ -90,7 +97,7 @@
     font-size: 36px;
     line-height: 36px;
     margin-top: 0;
-    padding-left: 45px;
+    padding-left: 36px;
     margin-bottom: 81px;
 
     @media (min-width: @desktop-width) {
@@ -98,6 +105,7 @@
       padding-top: 7px;
       grid-column-start: 1;
       grid-column-end: 3;
+      margin-left: -7px;
     }
   }
 }
@@ -120,9 +128,10 @@
       min-width: 300px;
       margin: 0;
       gap: 0;
-      padding-left: 118px;
+      padding-left: 164px;
       flex: auto;
       column-gap: 55px;
+      padding-right: 12px;
     }
   }
 }
@@ -138,8 +147,8 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
-    align-self: center;
-    margin-bottom: 8px;
+    margin-bottom: -4px;
+    margin-top: 25px;
 
     @media (min-width: @desktop-width) {
       min-width: 160px;
@@ -163,6 +172,7 @@
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
+    padding-right: 17px;
   }
 }
 
@@ -179,6 +189,7 @@
       width: 244px;
       height: 40px;
       margin-bottom: 10px;
+      margin-right: 0;
     }
   }
 }
@@ -204,6 +215,7 @@
     height: 200px;
     justify-content: flex-end;
     background-image: url("../../../img/additional/gift-photo-tablet.png");
+    max-width: 100%;
 
     @media (min-width: @desktop-width) {
       height: 290px;
@@ -211,6 +223,7 @@
       margin-left: auto;
       background-image: url("../../../img/additional/gift-photo-desktop.png");
       justify-content: center;
+      margin-right: 8px;
     }
   }
 }
@@ -233,6 +246,7 @@
   @media (min-width: @tablet-width) {
     padding: 4px 125px 0 0;
     text-align: left;
+    max-width: 50%;
 
     &::before {
       top: -10px;
@@ -240,8 +254,9 @@
     }
 
     @media (min-width: @desktop-width) {
-      padding: 142px 0 0 0;
+      padding: 140px 0 0 0;
       text-align: center;
+      max-width: 100%;
 
       &::before {
         top: 15px;

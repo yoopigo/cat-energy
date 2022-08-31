@@ -198,8 +198,7 @@
                 >
                   <img
                     class="advantages__item-img"
-                    alt=""
-                    ;
+                    alt="иконка"
                     width="30"
                     height="32"
                     src="img/advantages/icon-leaf.svg"
@@ -217,7 +216,7 @@
                 >
                   <img
                     class="advantages__item-img"
-                    alt=""
+                    alt="иконка"
                     width="29"
                     height="31"
                     src="img/advantages/icon-tub.svg"
@@ -235,7 +234,7 @@
                 >
                   <img
                     class="advantages__item-img"
-                    alt=""
+                    alt="иконка"
                     width="25"
                     height="30"
                     src="img/advantages/icon-eat.svg"
@@ -253,7 +252,7 @@
                 >
                   <img
                     class="advantages__item-img"
-                    alt=""
+                    alt="иконка"
                     width="32"
                     height="33"
                     src="img/advantages/icon-alarm.svg"
@@ -316,20 +315,34 @@
               <div class="slider--wrap">
                 <div class="slider-slide slider-slide--one">
                   <picture class="slider__pic">
+                    <source
+                      type="image/webp"
+                      srcset="
+                        img/slider/cat-fat.webp    1x,
+                        img/slider/cat-fat@2x.webp 2x
+                      "
+                    />
                     <img
                       class="slider__img--before slider__pic--cat-fat"
                       src="img/slider/cat-fat.png"
-                      srcset="img/slider/cat-fat@2x.png @2x.png 2x"
+                      srcset="img/slider/cat-fat@2x.png 2x"
                       alt=""
                     />
                   </picture>
                 </div>
                 <div class="slider-slide slider-silde--two slider__off">
                   <picture class="slider__pic">
+                    <source
+                      type="image/webp"
+                      srcset="
+                        img/slider/cat-skinny.webp    1x,
+                        img/slider/cat-skinny@2x.webp 2x
+                      "
+                    />
                     <img
                       class="slider__img--before slider__pic--cat-skinny"
                       src="img/slider/cat-skinny.png"
-                      srcset="img/slider/cat-skinny.png@2x.png @2x.png 2x"
+                      srcset="img/slider/cat-skinny.png@2x.png 2x"
                       alt=""
                     />
                   </picture>

@@ -99,6 +99,15 @@ const createWebPromo = () => {
 
 exports.createWebPromo = createWebPromo;
 
+const createWebSlider = () => {
+  return gulp
+    .src("source/img/slider/*.{png,jpg}")
+    .pipe(webp({ quality: 90 }))
+    .pipe(gulp.dest("build/img/slider"));
+};
+
+exports.createWebSlider = createWebSlider;
+
 //Fonts
 
 const copyFonts = () => {
@@ -167,7 +176,11 @@ const watcher = () => {
 
 const allCopy = gulp.parallel(copyFonts, copyOther, copyOther2, copyNormalize);
 
-const createWebp = gulp.parallel(createWebpCatalog, createWebPromo);
+const createWebp = gulp.parallel(
+  createWebpCatalog,
+  createWebPromo,
+  createWebSlider
+);
 
 exports.allCopy = allCopy;
 exports.createWebp = createWebp;

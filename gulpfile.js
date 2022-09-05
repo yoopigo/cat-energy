@@ -13,6 +13,7 @@ const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const del = require("del");
+const ghPages = require("gulp-gh-pages");
 
 // Styles
 
@@ -202,3 +203,7 @@ exports.default = gulp.series(
   imgMin,
   gulp.parallel(minCss, html, scripts, createWebp, scripts)
 );
+
+gulp.task("deploy", function () {
+  return gulp.src("./build/**/*").pipe(ghPages());
+});

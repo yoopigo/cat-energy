@@ -20,3 +20,11 @@ jobs:
       - run: npm ci
       - run: npm install
       - run: npm run start
+
+
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with: 
+         GITHUB_TOKEN: ${{ secrets.BUILD }}
+          BRANCH: gh-pages
+          FOLDER: public
+          CLEAN: true

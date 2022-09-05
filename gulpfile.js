@@ -199,7 +199,6 @@ exports.default = gulp.series(
   clean,
   allCopy,
   styles,
-  copyImages,
-  gulp.parallel(html, scripts, createWebp, scripts),
-  gulp.series(server, watcher)
+  imgMin,
+  gulp.parallel(minCss, html, scripts, createWebp, scripts)
 );

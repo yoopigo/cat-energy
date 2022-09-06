@@ -190,7 +190,6 @@ const build = gulp.series(
   allCopy,
   styles,
   imgMin,
-  copyImages,
   gulp.parallel(minCss, html, scripts, createWebp)
 );
 

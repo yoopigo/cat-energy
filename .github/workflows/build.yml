@@ -7,24 +7,15 @@ on:
       - master
 
 jobs:
-   check:
-   name: Check
-   runs-on: ubuntu-latest
-   steps:
-   - name: Set up Node.js
-   uses: actions/setup-node@v1
-   with:
-   node-version: '12'
-
-  -uses: actions/checkout@master
-  name: Checkout
-
-  -name: Install dependencies
-  run: npm install
-  run: npm start
-
-  -name: Deploy
-  uses: JamesIves/github-pages-deploy-action@4.3.3
-  with:
-  branch: gh-pages
-  folder: build
+  lint:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      - run: npm run build

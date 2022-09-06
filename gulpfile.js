@@ -13,7 +13,6 @@ const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const del = require("del");
-const ghPages = require("gulp-gh-pages");
 
 // Styles
 
@@ -191,7 +190,8 @@ const build = gulp.series(
   allCopy,
   styles,
   imgMin,
-  gulp.parallel(minCss, html, scripts, createWebp, scripts)
+  copyImages,
+  gulp.parallel(minCss, html, scripts, createWebp)
 );
 
 exports.build = build;
@@ -200,10 +200,6 @@ exports.default = gulp.series(
   clean,
   allCopy,
   styles,
-  imgMin,
-  gulp.parallel(minCss, html, scripts, createWebp, scripts)
+  copyImages,
+  gulp.parallel(minCss, html, scripts, createWebp, server, watcher)
 );
-
-gulp.task("deploy", function () {
-  return gulp.src("./build/**/*").pipe(ghPages());
-});

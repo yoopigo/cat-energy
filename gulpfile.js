@@ -14,6 +14,9 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const del = require("del");
 
+const ghpages = require("gh-pages");
+ghpages.publish("dist", function (err) {});
+
 // Styles
 
 const styles = () => {
@@ -200,5 +203,5 @@ exports.default = gulp.series(
   allCopy,
   styles,
   copyImages,
-  gulp.parallel(minCss, html, scripts, createWebp, server, watcher)
+  gulp.parallel(html, scripts, createWebp, server, watcher)
 );

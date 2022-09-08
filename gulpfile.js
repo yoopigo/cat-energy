@@ -14,8 +14,15 @@ const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const del = require("del");
 
-const ghpages = require("gh-pages");
-ghpages.publish("dist", function (err) {});
+const ghPages = require("gh-pages");
+const path = require("path");
+
+//Deploy
+
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), "./build"), cb);
+}
+exports.deploy = deploy;
 
 // Styles
 

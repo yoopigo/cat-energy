@@ -1,7 +1,7 @@
 {
   "name": "Cat-energy",
   "private": true,
-  "homepage": "https://yoopigo.github.io/cat-energy/",
+  "homepage": "https://yoopigo.github.io/cat-energy",
   "description": "Личный проект «Cat-energy» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
@@ -28,7 +28,7 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/less/**/*.less\" --syntax less",
     "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp styles",
+    "build": "npm run build",
     "start": "gulp",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"

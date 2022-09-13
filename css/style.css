@@ -1077,7 +1077,7 @@ img {
   content: "";
   width: 26px;
   height: 12px;
-  background-image: url("../../../img/nutrition-program/icon-arrow.svg");
+  background-image: url("../img/nutrition-program/icon-arrow.svg");
   left: 100px;
   background-repeat: no-repeat;
   background-position: right center;
@@ -1173,25 +1173,25 @@ img {
 }
 @media (min-width: 768px) {
   .advantages__item-one {
-    background-image: url("../../../img/advantages/one.png");
+    background-image: url("../img/advantages/one.png");
     background-position: 126px 38px;
   }
 }
 @media (min-width: 768px) {
   .advantages__item-two {
-    background-image: url("../../../img/advantages/two.png");
+    background-image: url("../img/advantages/two.png");
     background-position: 122px 34px;
   }
 }
 @media (min-width: 768px) {
   .advantages__item-three {
-    background-image: url("../../../img/advantages/three.png");
+    background-image: url("../img/advantages/three.png");
     background-position: 123px 38px;
   }
 }
 @media (min-width: 768px) {
   .advantages__item-four {
-    background-image: url("../../../img/advantages/four.png");
+    background-image: url("../img/advantages/four.png");
     background-position: 123px 37px;
   }
 }
@@ -1256,11 +1256,6 @@ img {
     line-height: 24px;
     overflow: hidden;
     max-width: 40vw;
-  }
-}
-@media (min-width: 768px) and (min-width: 1440px) {
-  .advantages-item__descreption {
-    max-width: 12vw;
   }
 }
 .advantages__item-img {

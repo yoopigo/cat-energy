@@ -2713,7 +2713,7 @@ img {
   content: "";
   width: 18px;
   height: 14px;
-  background-image: url("../../../img/additional/icon-v.svg");
+  background-image: url("../img/additional/icon-v.svg");
   left: 6px;
 }
 @media (min-width: 768px) {

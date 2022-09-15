@@ -116,6 +116,7 @@ img {
   text-transform: uppercase;
   overflow: hidden;
   max-width: 95vw;
+  cursor: pointer;
 }
 .button:hover {
   background-color: #5eaa2f;
@@ -384,6 +385,7 @@ img {
 .page-footer__logo {
   align-self: center;
   padding-bottom: 15px;
+  cursor: pointer;
 }
 .page-footer__logo:hover {
   opacity: 70%;
@@ -409,6 +411,9 @@ img {
     padding: 0;
     flex-wrap: wrap;
   }
+}
+.page-footer__social-item {
+  cursor: pointer;
 }
 .page-footer__social-item--vk {
   padding-left: 34px;
@@ -489,6 +494,7 @@ img {
   padding-top: 21px;
   padding-bottom: 15px;
   border-top: 1px solid #d9d9d9;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .page-footer__html-academy {
@@ -2551,6 +2557,9 @@ img {
   .program-form__input {
     padding: 0 0 0 20px;
   }
+}
+.program-form__title {
+  cursor: pointer;
 }
 .program-form__title--radio {
   order: 2;
